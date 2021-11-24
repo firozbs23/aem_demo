@@ -1,0 +1,117 @@
+<!--/*
+    Copyright 2015 Adobe Systems Incorporated
+  
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+  
+        http://www.apache.org/licenses/LICENSE-2.0
+  
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+*/-->
+
+<!--
+<div class="cmp-helloworld" data-cmp-is="helloworld">
+    <h2 class="cmp-helloworld__title">${properties.text_demo}</h2>
+    <div class="cmp-helloworld__item" data-sly-test="${properties.text}">
+        <p class="cmp-helloworld__item-label">Text property:</p>
+        <pre class="cmp-helloworld__item-output" data-cmp-hook-helloworld="property">${properties.text_demo}</pre>
+    </div>
+    <div class="cmp-helloworld__item" data-sly-use.model="com.aem.demo.core.models.HelloWorldModel" data-sly-test="${model.message}">
+        <p class="cmp-helloworld__item-label">Model message:</p>
+        <pre class="cmp-helloworld__item-output"data-cmp-hook-helloworld="model">${model.message}</pre>
+    </div>
+
+
+
+
+
+</div>
+
+
+-->
+
+
+<div>
+
+    <!--   aem_demo.my_custom_lib   -->
+
+
+    <sly data-sly-use.model="com.aem.demo.core.models.MyDemoModel">
+
+        <h1>Hello ${model.name}</h1>
+
+        ========= Counter Array =============
+
+        <table>
+            <div data-sly-list="${model.counter}">
+
+                <tr>
+                    <td>
+                        <p> Counter : ${item} </p>
+                    </td>
+
+                </tr>
+
+
+            </div>
+
+        </table>
+
+
+    </sly>
+
+
+    <!--
+
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>GLPG Cognigy Chatbot Testing</title>
+    </head>
+
+    <body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="./authguard.js"></script>
+    <script type="text/javascript"
+            src="https://github.com/Cognigy/WebchatWidget/releases/download/v2.18.3/webchat.js"></script>
+    &lt;!&ndash; <link rel="stylesheet" href="./webchat-style.css" /> &ndash;&gt;
+    <link rel="stylesheet" href="./index.css" />
+
+    <script src="./webchat-helper.js"></script>
+    <script>
+
+        initWebchat('https://endpoint-trial.cognigy.ai/966653580cc143fa5c10f5664e83624da86ad02ddc54e8c9de50fab451c3941a', {
+            settings: {
+                colorScheme: "#f68701",
+                userId: "example@gmail.com"
+            }
+        })
+            .then(({sendMessage}) => {
+                sendMessage('', {
+                    'title': 'Dr.',
+                    'name': 'Smith',
+                    'country': 'NL',
+                    'flag': 'true',
+                    'uuid': '784651231',
+                    'loginToken': 'true'
+                });
+            });
+    </script>
+    <script>
+        gatedArea();
+    </script>
+    </body>
+
+    </html>
+
+    </sly>-->
+
+</div>
