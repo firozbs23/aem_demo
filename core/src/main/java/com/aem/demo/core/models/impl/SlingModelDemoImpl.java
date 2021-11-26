@@ -13,24 +13,24 @@ public class SlingModelDemoImpl implements SlingModelDemo {
 
     @Inject
     @Default(values = "Demo")
-    String firstName;
+    private String firstName;
     @Inject
     @Default(values = "")
-    String lastName;
+    private String lastName;
 
     @Override
     public String getFirstName() {
-        return firstName;
+        return firstName.trim().toUpperCase();
     }
 
     @Override
     public String getLastName() {
-        return lastName;
+        return lastName.trim().toUpperCase();
     }
 
     @Override
     public String getFullName() {
-        return firstName + " " + lastName;
+        return getFirstName() + " " + getLastName();
     }
 
 }

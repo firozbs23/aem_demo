@@ -1,6 +1,16 @@
+<sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html"
+     data-sly-call="${clientlib.all @ categories=['aem_demo.my_libs']}"></sly>
+
+
+
+
 <pre data-sly-use.obj="com.aem.demo.core.models.SlingModelDemo">
-
-
     Hello ${obj.fullName}
-
 </pre>
+
+
+
+
+<script>
+    callMe();
+</script>

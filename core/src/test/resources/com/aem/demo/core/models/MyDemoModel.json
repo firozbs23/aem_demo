@@ -1,0 +1,14 @@
+{
+  "jcr:primaryType": "nt:unstructured",
+  "layout": "responsiveGrid",
+  "sling:resourceType": "aem_demo/components/container",
+  "demo_comp": {
+    "jcr:primaryType": "nt:unstructured",
+    "jcr:createdBy": "admin",
+    "jcr:lastModifiedBy": "admin",
+    "text_demo": "hi demo hh",
+    "jcr:created": "Wed Nov 10 2021 06:32:48 GMT+0000",
+    "jcr:lastModified": "Wed Nov 10 2021 06:37:49 GMT+0000",
+    "sling:resourceType": "aem_demo/components/demo_comp"
+  }
+}
