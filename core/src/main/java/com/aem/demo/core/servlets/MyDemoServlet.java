@@ -46,8 +46,8 @@ public class MyDemoServlet extends SlingAllMethodsServlet {
         //response.getWriter().write("{'name' : 'Firoz Mahmud' , 'address' : 'Dhaka'}");
         response.getWriter().println("{\n" +
                 "\n" +
-                "\t\"name\": \"Firoz Mahmud\",\n" +
-                "\t\"address\": \"Dhaka\"\n" +
+                "\t\"name\": \"Firoz Mahmud2\",\n" +
+                "\t\"address\": \"Dhaka2\"\n" +
                 "\n" +
                 "}");
     }
@@ -92,7 +92,7 @@ public class MyDemoServlet extends SlingAllMethodsServlet {
 
 
             response.setContentType("text/plain");
-            response.getWriter().println("Successfully posted " + personPojo.getAddress() + "'s data : " + payloadRequest);
+            response.getWriter().println("Successfully posted " + personPojo.getName() + "'s data : " + payloadRequest);
 
         } catch (Exception exception) {
 
