@@ -78,21 +78,18 @@ public class MyDemoServlet extends SlingAllMethodsServlet {
             String address = request.getParameter("address");
 
             // Getting the request body and convert it into string
-            String payloadRequest = IOUtils.toString(request.getReader());
+            String requestBody = IOUtils.toString(request.getReader());
 
-            // Convert JSON body to pojo class
 
-            // Person person = new Gson().fromJson(request.getReader(), Person.class);  // Not working
-
-            JSONObject jsonObject = new JSONObject(payloadRequest);
+            JSONObject jsonObject = new JSONObject(requestBody);  // Convert request body string to JSONObject
 
 
             ObjectMapper mapper = new ObjectMapper();
-            Person personPojo = mapper.readValue(jsonObject.toString(), Person.class);
+            Person personPojo = mapper.readValue(requestBody, Person.class);
 
 
             response.setContentType("text/plain");
-            response.getWriter().println("Successfully posted " + personPojo.getName() + "'s data : " + payloadRequest);
+            response.getWriter().println("Successfully posted " + personPojo.getAddress() + "'s data : " + requestBody);
 
         } catch (Exception exception) {
 
@@ -101,13 +98,10 @@ public class MyDemoServlet extends SlingAllMethodsServlet {
 
         }
 
-
     }
 
 
-
-
-    private String getRequestBodyAsString(SlingHttpServletRequest request) throws IOException {
+    private String getRequestBodyAsString(SlingHttpServletRequest request) throws IOException {  // No need
         String body;
 
         body = request.getReader().lines()
@@ -117,9 +111,7 @@ public class MyDemoServlet extends SlingAllMethodsServlet {
     }
 
 
-
-
-    private String getBody(SlingHttpServletRequest request) throws IOException {
+    private String getBody(SlingHttpServletRequest request) throws IOException {  // No need
 
         String body;
         StringBuilder stringBuilder = new StringBuilder();

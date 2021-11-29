@@ -19,7 +19,7 @@ public class MyDemoModel {
 
     @PostConstruct
     protected void init() {
-        name = "Rajib Bolod";
+        name = "Firoz Mahmud";
 
         setCounter();
     }
