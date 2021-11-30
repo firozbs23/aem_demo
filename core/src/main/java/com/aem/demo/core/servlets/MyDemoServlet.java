@@ -46,8 +46,8 @@ public class MyDemoServlet extends SlingAllMethodsServlet {
         //response.getWriter().write("{'name' : 'Firoz Mahmud' , 'address' : 'Dhaka'}");
         response.getWriter().println("{\n" +
                 "\n" +
-                "\t\"name\": \"Firoz Mahmud2\",\n" +
-                "\t\"address\": \"Dhaka2\"\n" +
+                "\t\"name\": \"Firoz Mahmud\",\n" +
+                "\t\"address\": \"Dhaka\"\n" +
                 "\n" +
                 "}");
     }
