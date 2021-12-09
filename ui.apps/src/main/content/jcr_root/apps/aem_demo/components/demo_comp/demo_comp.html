@@ -113,4 +113,21 @@
 
     </sly>-->
 
+
 </div>
+
+<sly data-sly-test="${wcmmode.edit}">
+
+    <!--  inside wcmmode edit -->
+    <!--/* This is not visible */-->
+</sly>
+
+    <div onclick="clickMe()"
+         data-sly-resource="${'text' @resourceType='aem_demo/components/title' , wcmmode='disabled'}"></div>
+
+
+<script>
+    function clickMe() {
+        alert('I am alert from click');
+    }
+</script>

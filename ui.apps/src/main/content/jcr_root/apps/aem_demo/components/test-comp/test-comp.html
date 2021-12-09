@@ -1,0 +1,10 @@
+<div data-sly-use.booksModel="com.aem.demo.core.models.BooksModel"></div>
+
+<p>${booksModel.test}</p>
+
+<div data-sly-use.body="book.html">
+
+    <sly data-sly-call="body.authorBooks @ books=booksModel">
+
+    </sly>
+</div>
