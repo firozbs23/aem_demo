@@ -2,6 +2,19 @@
 
 <p>${booksModel.test}</p>
 
+
+====== By using data-sly-list =====
+<div data-sly-list.item="${booksModel.books}">
+
+    <p>Book Name: <b> ${item.book} </b></p>
+    <p>Subject Name: <b> ${item.subject} </b></p>
+
+    =================================================
+
+</div>
+
+
+===== Call another template =====
 <div data-sly-use.body="book.html">
 
     <sly data-sly-call="body.authorBooks @ books=booksModel">
