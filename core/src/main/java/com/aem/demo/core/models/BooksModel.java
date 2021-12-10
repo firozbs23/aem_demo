@@ -16,7 +16,7 @@ public class BooksModel {
 
     @PostConstruct
     protected void init() {
-        setTest("I am from Test model");
+        setTest("I am from Test");
         setBooks();
     }
 
