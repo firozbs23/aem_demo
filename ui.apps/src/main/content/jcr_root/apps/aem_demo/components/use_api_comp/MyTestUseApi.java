@@ -1,7 +1,6 @@
 package apps.aem_demo.components.use_api_comp;
 
 import com.adobe.cq.sightly.WCMUsePojo;
-import org.apache.sling.api.resource.Resource;
 
 public class MyTestUseApi extends WCMUsePojo {
 
@@ -12,13 +11,10 @@ public class MyTestUseApi extends WCMUsePojo {
 
     @Override
     public void activate() throws Exception {
-        Resource resource = getResource();
-        if (resource != null) {
-            setEnable();
-            setFirstName();
-            setLastName();
-            setFullName();
-        }
+        setEnable();
+        setFirstName();
+        setLastName();
+        setFullName();
     }
 
     private String getFirstName() {
@@ -26,7 +22,7 @@ public class MyTestUseApi extends WCMUsePojo {
     }
 
     private void setFirstName() {
-        this.firstName = getProperties().get("firstName", "");
+        this.firstName = this.getProperties().get("firstName", "").trim();
     }
 
     private String getLastName() {
@@ -34,7 +30,7 @@ public class MyTestUseApi extends WCMUsePojo {
     }
 
     private void setLastName() {
-        this.lastName = getProperties().get("lastName", "");
+        this.lastName = this.getProperties().get("lastName", "").trim();
     }
 
     public boolean isEnable() {

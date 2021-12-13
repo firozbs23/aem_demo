@@ -13,4 +13,5 @@
           ,core.wcm.components.pdfviewer.v1
           ,core.wcm.components.commons.datalayer.v1
           ,aem_demo.grid
-           ,aem_demo.demo_comp]"/>
+           ,aem_demo.demo_comp
+           ,aem_demo.my_libs]"/>
